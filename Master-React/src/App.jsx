@@ -48,7 +48,7 @@ export default function Example() {
           <p className="mt-2 text-lg leading-8 text-gray-600">
             Documentation :{" "}
             <a
-              href="https://master-react.notion.site/React-Tutorial-0034d8c5567c498d95daa191a86a5ac0?pvs=4"
+              href="https://fullstack-tutorial.notion.site/React-Tutorial-0034d8c5567c498d95daa191a86a5ac0"
               className="font-semibold underline"
             >
               React-Docs
