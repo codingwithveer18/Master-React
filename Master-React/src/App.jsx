@@ -9,7 +9,7 @@ const posts = [
     datetime: "2024-03-16",
     image:
       "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    url: "https://github.com/codingwithveer18/Master-React",
+    url: "https://github.com/codingwithveer18/Master-React/tree/main/Projects/vite-project-Bharat-Clock",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const posts = [
     datetime: "2024-03-16",
     image:
       "https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    url: "https://github.com/codingwithveer18/Master-React",
+    url: "https://github.com/codingwithveer18/Master-React/tree/main/Projects/vite-project-todo-app",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const posts = [
     datetime: "2024-03-16",
     image:
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    url: "https://github.com/codingwithveer18/Master-React",
+    url: "https://github.com/codingwithveer18/Master-React/tree/main/Projects/vite-project-calculator",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Example() {
             </a>
           </p>
         </div>
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-8 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
             <article
               key={post.id}
@@ -67,8 +67,7 @@ export default function Example() {
                 </time>
               </div>
               <div className="group relative">
-                <h3 className="mt-3 mb-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                  <span className="inset-0" />
+                <h3 className="my-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                   <a href={post.url} className="mt-3">
                     {post.title}
                   </a>
