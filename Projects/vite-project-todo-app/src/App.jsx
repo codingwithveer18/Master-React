@@ -51,9 +51,9 @@ function App() {
     <>
       <ContextItems.Provider
         value={{
-          todoItems: todoItems,
-          handleNewitem: handleNewitem,
-          handleDelete: handleDelete,
+          todoItems,
+          handleNewitem,
+          handleDelete,
         }}
       >
         <center className="todo-container">

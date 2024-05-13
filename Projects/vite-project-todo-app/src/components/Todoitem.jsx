@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import { ContextItems } from "../store/ContextItems";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 
-function Todoitem({ item, date, onhandleDelete }) {
+function Todoitem({ item, date }) {
+  const { handleDelete } = useContext(ContextItems);
   return (
     <div className="container">
       <div className="row my-row">
@@ -16,7 +19,7 @@ function Todoitem({ item, date, onhandleDelete }) {
           <button
             type="button"
             className="btn btn-danger my-button"
-            onClick={() => onhandleDelete(item)}
+            onClick={() => handleDelete(item)}
           >
             <MdDelete />
           </button>
