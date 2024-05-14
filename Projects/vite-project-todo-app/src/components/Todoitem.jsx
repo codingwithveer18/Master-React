@@ -6,24 +6,20 @@ import { MdDelete } from "react-icons/md";
 function Todoitem({ item, date }) {
   const { handleDelete } = useContext(ContextItems);
   return (
-    <div className="container">
-      <div className="row my-row">
-        <div className="col-6 items-container">
-          {" "}
-          <BsArrowRightCircle />
-          {"\t"}
-          {item}
-        </div>
-        <div className="col-4 items-container">{date}</div>
-        <div className="col-2">
-          <button
-            type="button"
-            className="btn btn-danger my-button"
-            onClick={() => handleDelete(item)}
-          >
-            <MdDelete />
-          </button>
-        </div>
+    <div className="grid grid-cols-3 bg-slate-200 shadow-md p-4 items-center max-sm:grid-cols-1 max-sm:justify-items-center">
+      <div className="flex justify-stretch items-center max-sm:py-1">
+        <BsArrowRightCircle className="mx-2" />
+        {item}
+      </div>
+      <div className="flex justify-center">{date}</div>
+      <div className="flex justify-center max-sm:py-1">
+        <button
+          type="button"
+          className="bg-red-500 p-3 rounded-lg"
+          onClick={() => handleDelete(item)}
+        >
+          <MdDelete className="text-white " />
+        </button>
       </div>
     </div>
   );

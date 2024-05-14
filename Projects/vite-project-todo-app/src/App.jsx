@@ -2,8 +2,6 @@ import Appname from "./components/Appname";
 import AppTodo from "./components/AppTodo";
 import Todoitems from "./components/Todoitems";
 import Welcome from "./components/Welcome";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 import { useState } from "react";
 import { ContextItems } from "./store/ContextItems";
 
@@ -56,12 +54,12 @@ function App() {
           handleDelete,
         }}
       >
-        <center className="todo-container">
+        <div className="w-screen h-screen bg-slate-100">
           <Appname />
           <AppTodo />
           <Welcome />
           <Todoitems />
-        </center>
+        </div>
       </ContextItems.Provider>
     </>
   );
