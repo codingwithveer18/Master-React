@@ -17,7 +17,7 @@ const Clocktime = () => {
       <p className="text-center text-white text-xl mx-2">
         This is the Current Date & Time :{" "}
       </p>
-      <span className="bg-neutral-800 p-2 rounded-lg shadow-lg font-medium text-white text-xl">
+      <span className="bg-neutral-800 p-2 rounded-lg shadow-lg font-medium text-white text-lg">
         {currentTime.toLocaleDateString()} - {currentTime.toLocaleTimeString()}
       </span>
     </div>

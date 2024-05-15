@@ -14,12 +14,12 @@ function App() {
         }}
       >
         <div className=" bg-gradient-to-t from-neutral-200/50 to-neutral-900/80 flex justify-center items-center h-full">
-          <div className="w-1/3 flex flex-col items-center">
+          <div className="w-2/5 flex flex-col items-center">
             <Clockname />
             <Clockslogan />
             <Clocktime />
           </div>
-          <div className="w-2/3">
+          <div className="w-3/5">
             <Timezones />
           </div>
         </div>
