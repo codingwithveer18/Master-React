@@ -1,7 +1,7 @@
 import Errormessage from "./errormessage";
 import Zoneitem from "./zones";
-import Container from "./Container";
-import Countryinput from "./Countryinput";
+import Container from "./Container.jsx";
+import Countryinput from "./Countryinput.jsx";
 import { useState } from "react";
 
 let Timezones = () => {
