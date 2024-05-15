@@ -1,5 +1,3 @@
-import styles from "./Buttons.module.css";
-
 const Buttons = ({ onbtnclick }) => {
   const buttons = [
     "1",
@@ -21,9 +19,13 @@ const Buttons = ({ onbtnclick }) => {
     "C",
   ];
   return (
-    <div className={styles.buttonsContainer}>
+    <div className="flex flex-wrap justify-center gap-5 bg-slate-300">
       {buttons.map((btn) => (
-        <button className={styles.button} onClick={() => onbtnclick(btn)}>
+        <button
+          className="text-2xl m-2 bg-slate-100 p-2 hover:bg-slate-50 rounded-lg"
+          onClick={() => onbtnclick(btn)}
+          key={btn}
+        >
           {btn}
         </button>
       ))}

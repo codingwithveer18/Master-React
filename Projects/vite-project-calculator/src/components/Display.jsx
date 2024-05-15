@@ -1,6 +1,13 @@
-import styles from "./Display.module.css";
-
 const Display = ({ value }) => {
-  return <input type="text" className={styles.display} value={value} readOnly/>;
+  return (
+    <div className="flex justify-center">
+      <input
+        type="text"
+        className="w-11/12 p-2 text-2xl m-2 rounded-lg "
+        value={value}
+        readOnly
+      />
+    </div>
+  );
 };
 export default Display;
