@@ -6,7 +6,7 @@ import { MdDelete } from "react-icons/md";
 function Todoitem({ item, date }) {
   const { handleDelete } = useContext(ContextItems);
   return (
-    <div className="grid grid-cols-3 bg-slate-200 shadow-md p-4 items-center max-sm:grid-cols-1 max-sm:justify-items-center">
+    <div className="grid grid-cols-3 bg-slate-200 shadow-md p-4 items-center max-sm:grid-cols-1 max-sm:justify-items-center rounded-lg">
       <div className="flex justify-stretch items-center max-sm:py-1">
         <BsArrowRightCircle className="mx-2" />
         {item}
