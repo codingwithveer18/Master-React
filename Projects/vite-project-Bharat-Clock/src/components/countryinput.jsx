@@ -1,17 +1,17 @@
-import styles from "./countryinput.module.css";
+import React from "react";
 
-const Countryinput = ({ handleonchange, handleonclick, onenter }) => {
-  // const handleonchange = () => {
-  //   console.log(event.target.value);
+const Countryinput = ({ handleonclick, onenter }) => {
+  // const handleonchange = (e) => {
+  //   console.log(e.target.value);
   // };
   return (
     <>
       <input
-        className={styles.input}
-        placeholder="Enter Country"
+        className="rounded-lg p-2 my-2"
+        placeholder="Press ENTER after writing Country's Name"
         type="text"
-        // onChange={handleonchange}
         onKeyDown={onenter}
+        // onChange={handleonchange}
       />
       {/* <button
         className={`${styles.button} btn btn-info`}
