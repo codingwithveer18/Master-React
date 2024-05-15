@@ -18,7 +18,7 @@ const Item = ({
     <>
       <li
         className={`bg-white p-2 grid grid-cols-2 justify-between items-center rounded-md my-2 ${
-          bought && "bg-neutral-400"
+          bought && "bg-neutral-400/90"
         }`}
       >
         <span className="font-medium text-xl text-black">{country}</span>
