@@ -1,9 +1,12 @@
 let Clockslogan = () => {
   return (
-    <p className="text-center text-xl my-6 text-white p-2 rounded-md ">
-      This is the Clock that shows the time in{" "}
-      <span className="font-medium bg-neutral-800 p-2 rounded-md">
-        Bharat or India{" "}
+    <p
+      className="text-center text-2xl mb-8 mt-1 rounded-md mx-2 max-sm:text-xl"
+      style={{ zIndex: 1 }}
+    >
+      Clock of{" "}
+      <span className="font-medium text-2xl text-orange-500 max-sm:text-xl">
+        INDIA
       </span>
     </p>
   );

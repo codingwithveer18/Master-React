@@ -2,8 +2,7 @@ import React from "react";
 
 const Item = ({
   country,
-  handleonclick,
-  bought,
+
   timezone,
   currentTime,
   formatTime,
@@ -16,28 +15,24 @@ const Item = ({
   // };
   return (
     <>
-      <li
-        className={`bg-white p-2 grid grid-cols-2 justify-between items-center rounded-md my-2 ${
-          bought && "bg-neutral-400/90"
-        }`}
-      >
-        <span className="font-medium text-xl text-black">{country}</span>
-
-        <button
-          className="bg-green-200 font-semibold p-2 rounded-md "
-          onClick={handleonclick}
-          // onClick={() => buttonclicked(country)}
-          // or we can do this
-          //-- Anonymous function -- onClick={() => (country)}
-          // or we can do this
-          //-- onClick={buttonclicked} -- just passing the reference
-        >
-          See
-        </button>
-      </li>
-      <p className="p-2 font-medium text-white text-center text-xl">
-        {formatTime(currentTime, timezone)}
-      </p>
+      <table className="border text-white my-2">
+        <thead>
+          <tr className="text-white text-lg">
+            <th className="py-2 px-2 font-light">Country</th>
+            <th className="py-2 font-light">Timezone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="border text-white px-2">
+            <td className="p-2 font-base text-center text-lg max-sm:text-sm border">
+              <span>{country}</span>
+            </td>
+            <td className="p-2 font-base text-center text-lg max-sm:text-sm">
+              <p className="">{formatTime(currentTime, timezone)}</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </>
   );
 };

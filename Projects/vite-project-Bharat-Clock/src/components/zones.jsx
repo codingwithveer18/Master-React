@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import Item from "./zoneslist";
-const Zoneitem = ({ items }) => {
-  let [ActiveItems, SetActiveItems] = useState([]);
+const Zoneitem = ({ items, handleonclick }) => {
+  const [ActiveItems, SetActiveItems] = useState([]);
   const [currentTime, setCurrentTime] = useState(new Date());
 
-  let onSeeButton = (item, event) => {
-    console.log(`See you in ${item}`);
-    let newItems = [...ActiveItems, item];
-    SetActiveItems(newItems);
-  };
+  // let onSeeButton = (item) => {
+  //   //console.log(`See you in ${item}`);
+  //   // let newItems = [...ActiveItems, item];
+  //   // SetActiveItems(newItems);
+  //   setCountries([]);
+  // };
+
   const formatTime = (date, timezone) => {
     return new Intl.DateTimeFormat("en-US", {
       timeZone: timezone,
@@ -26,6 +28,7 @@ const Zoneitem = ({ items }) => {
     };
     return timezones[country.split(" ")[0]] || "UTC"; // Fallback to UTC
   };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTime(new Date());
@@ -36,7 +39,7 @@ const Zoneitem = ({ items }) => {
   }, []);
   return (
     <>
-      <ul className="p-2 grid grid-cols-2">
+      <ul className="p-2 grid grid-cols-1">
         {items.map((item) => (
           <Item
             key={item}

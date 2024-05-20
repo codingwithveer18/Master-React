@@ -1,6 +1,6 @@
 let Container = ({ children }) => {
   return (
-    <div className="border-2 border-white w-2/3 flex flex-col p-2 rounded-lg bg-neutral-800">
+    <div className="w-full mx-8 flex flex-col p-2 rounded-lg bg-neutral-800 max-sm:mb-2 shadow-lg shadow-gray-400">
       {children}
     </div>
   );

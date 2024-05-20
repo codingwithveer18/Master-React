@@ -14,7 +14,7 @@ let Timezones = () => {
   //let [textToShow, setTextToShow] = useState();
   let [countries, setCountries] = useState([]);
   let [error, setError] = useState("");
-  const supportedCountries = ["INDIA", "US", "UK", "AUSTRALIA"];
+  const supportedCountries = ["US", "UK", "INDIA", "AUSTRALIA"];
 
   // console.log(`current value of textState:${textToShow}`);
 
@@ -54,26 +54,27 @@ let Timezones = () => {
     }
   };
 
-  // const handleonclick = () => {
-  //console.log("New country is : " + newContry);
-  // };
+  const handleonclick = () => {
+    setCountries([]);
+    console.log("Table cleared");
+  };
   return (
     <div className="w-full flex justify-center mt-8 ">
       <Container>
         <h3 className="text-center font-medium text-xl text-white uppercase my-2">
-          Different Countries Time
+          Other Country's Time
         </h3>
         {/* {empty} */}
         {/* {condition} */}
         <Countryinput
           // handleInputChange={handleInputChange}
           onenter={onenter}
-          // handleonclick={handleonclick}
+          handleonclick={handleonclick}
         ></Countryinput>
         {error && <Errormessage message={error} items={countries} />}
 
         {/* <p>{textToShow}</p> */}
-        <Zoneitem items={countries} />
+        <Zoneitem items={countries} setCountries={setCountries} />
       </Container>
     </div>
   );
