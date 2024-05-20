@@ -1,9 +1,9 @@
 const Display = ({ value }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center w-full">
       <input
         type="text"
-        className="w-11/12 p-2 text-2xl m-2 rounded-lg "
+        className="w-full p-2 text-2xl mt-2 mb-4 rounded-md bg-neutral-300 border-2 text-black"
         value={value}
         readOnly
       />

@@ -19,10 +19,10 @@ const Buttons = ({ onbtnclick }) => {
     "C",
   ];
   return (
-    <div className="flex flex-wrap justify-center gap-5 bg-slate-300">
+    <div className="w-full flex flex-wrap justify-evenly gap-5 bg-neutral-700 max-sm:gap-3">
       {buttons.map((btn) => (
         <button
-          className="text-2xl m-2 bg-slate-100 p-2 hover:bg-slate-50 rounded-lg"
+          className="text-2xl shadow-inner shadow-neutral-300 m-2 text-white p-4 hover:bg-slate-50 hover:text-black rounded-lg text-center max-sm:text-xl max-sm:p-3"
           onClick={() => onbtnclick(btn)}
           key={btn}
         >
