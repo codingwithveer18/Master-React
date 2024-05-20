@@ -16,7 +16,7 @@ function AppTodo() {
     handleNewitem(todo, dueDate);
   };
   return (
-    <div className="w-full shadow-md py-4 mt-2 ">
+    <div className="w-full shadow-md py-2">
       <form onSubmit={handleAddbtn}>
         <div className="flex flex-row justify-evenly px-4 max-md:flex-col ">
           <input

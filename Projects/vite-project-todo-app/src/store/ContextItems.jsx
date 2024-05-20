@@ -22,12 +22,7 @@ const todoreducer = (currtodoItems, action) => {
   return newitemadded;
 };
 const TodoItemsContextProvider = ({ children }) => {
-  const [todoItems, dispatchTodoItems] = useReducer(todoreducer, [
-    {
-      name: "Add New Item",
-      duedate: "05-05-2024",
-    },
-  ]);
+  const [todoItems, dispatchTodoItems] = useReducer(todoreducer, []);
   const handleNewitem = (itemName, itemDueDate) => {
     console.log(`item added - Name: ${itemName} Date : ${itemDueDate}`);
 
