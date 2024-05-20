@@ -63,6 +63,9 @@ let Timezones = () => {
       <Container>
         <h3 className="text-center font-medium text-xl text-white uppercase my-2">
           Other Country's Time
+          <p className="text-base font-light my-2">
+            [ Available : INDIA , US , UK , AUSTRALIA ]
+          </p>
         </h3>
         {/* {empty} */}
         {/* {condition} */}
