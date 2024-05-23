@@ -15,11 +15,11 @@ const Item = ({
   // };
   return (
     <>
-      <table className="border text-white my-2">
+      <table className="table-fixed">
         <thead>
           <tr className="text-white text-lg">
-            <th className="py-2 px-2 font-light">Country</th>
-            <th className="py-2 font-light">Timezone</th>
+            <th className="p-2 font-light">Country</th>
+            <th className="p-2 font-light">Timezone</th>
           </tr>
         </thead>
         <tbody>
