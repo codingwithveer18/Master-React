@@ -10,13 +10,15 @@ function App() {
   return (
     <>
       <PostListProvider>
-        <div className="flex">
-          <Sidebar active={active} setactive={setactive} />
-          <div className={`w-screen h-screen flex flex-col justify-between `}>
-            <Header />
-            {active === "Home" ? <Postlist /> : <CreatePost />}
-            <Footer />
+        <div className="w-screen h-screen flex flex-col justify-between">
+          <Header />
+          <div className="flex">
+            <Sidebar active={active} setactive={setactive} />
+            <div className="w-full h-full">
+              {active === "Home" ? <Postlist /> : <CreatePost />}
+            </div>
           </div>
+          <Footer />
         </div>
       </PostListProvider>
     </>

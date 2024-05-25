@@ -71,6 +71,30 @@ const DEFAULT_POST_LIST = [
     userId: "user-2",
     tags: ["vacation", "mumbai", "work"],
   },
+  {
+    id: "3",
+    title: "Going to Mumbai",
+    body: "Hi Friends, I am going to Mumbai",
+    reactions: 4,
+    userId: "user-2",
+    tags: ["vacation", "mumbai", "work"],
+  },
+  {
+    id: "4",
+    title: "Going to Mumbai",
+    body: "Hi Friends, I am going to Mumbai",
+    reactions: 4,
+    userId: "user-2",
+    tags: ["vacation", "mumbai", "work"],
+  },
+  {
+    id: "5",
+    title: "Going to Mumbai",
+    body: "Hi Friends, I am going to Mumbai",
+    reactions: 4,
+    userId: "user-2",
+    tags: ["vacation", "mumbai", "work"],
+  },
 ];
 
 export default PostListProvider;

@@ -24,7 +24,7 @@ function CreatePost() {
     tagsele.current.value = "";
   };
   return (
-    <div className="w-full h-full  px-8 pt-6 mb-4 flex justify-center items-center">
+    <div className="my-10 px-8 pt-6 flex justify-center items-center">
       <form
         className="w-[50%] p-10 bg-slate-100 rounded-lg shadow-lg max-md:p-4 max-md:w-full flex flex-col"
         onSubmit={handlesubmit}
