@@ -4,7 +4,7 @@ const posts = [
     title: "Vite-Project-01 (Bharat Clock)",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "Created a Clock in Vite+React & Tailwind CSS with functionalities like useEffect, etc",
     date: "Mar 16, 2020",
     datetime: "2024-03-16",
     image:
@@ -16,9 +16,9 @@ const posts = [
     title: "Vite-Project-02 (Todo App)",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "Created a Todo app in Vite+React & Tailwind CSS with functionalities like useEffect,useRef, etc",
     date: "Apr 16, 2024",
-    datetime: "2024-03-16",
+    datetime: "2024-03-24",
     image:
       "https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     url: "https://github.com/codingwithveer18/Master-React/tree/main/Projects/vite-project-todo-app",
@@ -28,16 +28,40 @@ const posts = [
     title: "Vite-Project-03 (Calculator)",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "Created a Calculator in Vite+React & Tailwind CSS with functionalities like useEffect,useRef, etc",
     date: "Apr 16, 2024",
-    datetime: "2024-03-16",
+    datetime: "2024-04-13",
+    image:
+      "https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://github.com/codingwithveer18/Master-React/tree/main/Projects/vite-project-calculator",
+  },
+  {
+    id: 4,
+    title: "Vite-Project-04 (Social Media)",
+    href: "#",
+    description:
+      "Created a Social Media in Vite+React & Tailwind CSS with functionalities like useEffect,useRef,useReducer,useCallBack etc",
+    date: "Apr 16, 2024",
+    datetime: "2024-05-10",
     image:
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    url: "https://github.com/codingwithveer18/Master-React/tree/main/Projects/vite-project-calculator",
+    url: "https://github.com/codingwithveer18/Master-React/tree/main/Projects/vite-project-SocialMedia",
+  },
+  {
+    id: 5,
+    title: "Vite-Project-04 (Using Redux Toolkit)",
+    href: "#",
+    description:
+      "Created a small demo project in Vite+React about the functionality of Redux-Toolkit",
+    date: "May 16, 2024",
+    datetime: "2024-05-20",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    url: "https://github.com/codingwithveer18/Master-React/tree/main/Projects/vite-project-SocialMedia",
   },
 ];
 
-export default function Example() {
+export default function App() {
   return (
     <div className="bg-white py-12 sm:py-19">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
