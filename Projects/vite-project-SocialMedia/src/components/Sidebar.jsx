@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "./logo.png";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ active, setactive }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -7,53 +8,35 @@ const Sidebar = ({ active, setactive }) => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-  const handleclick = (tabname) => {
-    setactive(tabname);
-    setIsOpen(!isOpen);
-  };
 
   return (
     <>
       <div
-        className={`bg-neutral-700 text-black h-screen max-sm:absolute max-sm:z-10 max-sm:w-screen sm:w-2/5 lg:w-1/5  ${
+        className={`bg-neutral-800 text-black min-h-screen max-sm:absolute max-sm:z-10 max-sm:w-screen sm:w-2/5 lg:w-1/5 ${
           isOpen ? "block" : "hidden"
         } `}
       >
-        <div className="flex flex-col p-3 h-screen py-auto">
+        <div className="flex flex-col p-3">
           <div className="border-b-2 border-gray-100 text-white flex justify-around items-center py-4 max-sm:flex-col mt-6">
             <img src={Logo} alt="logo" className="w-14" />
             {/* <p className="text-md max-sm:text-sm ">SOCIAL MEDIA</p> */}
           </div>
           <ul className="flex flex-col mb-auto space-y-1 mt-8">
-            <li
-              onClick={() => {
-                handleclick("Home");
-              }}
-            >
-              <a
-                href="#"
-                className={`flex items-center p-2 rounded  ${
-                  active === "Home" ? "bg-slate-100 text-black" : "text-white"
-                }`}
+            <li>
+              <Link
+                to="/"
+                className={`flex items-center p-2 rounded text-white`}
               >
                 Home
-              </a>
+              </Link>
             </li>
-            <li
-              onClick={() => {
-                handleclick("Create Post");
-              }}
-            >
-              <a
-                href="#"
-                className={`flex items-center p-2 rounded  ${
-                  active === "Create Post"
-                    ? "bg-slate-100 text-black"
-                    : "text-white"
-                }`}
+            <li>
+              <Link
+                to="/createpost"
+                className={`flex items-center p-2 rounded text-white`}
               >
                 Create Post
-              </a>
+              </Link>
             </li>
             <div className="sm:hidden">
               <li>

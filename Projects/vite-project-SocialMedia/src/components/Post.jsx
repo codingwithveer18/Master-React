@@ -5,9 +5,9 @@ import { PostList } from "../store/PostListStore";
 const Post = ({ post }) => {
   const { deletePost } = useContext(PostList);
   return (
-    <div className="bg-white px-4 flex items-center justify-center">
+    <div className="bg-white px-4 flex justify-center">
       <div className="m-6 border-2 rounded-lg ">
-        <div className="flex flex-col mt-2  border-black relative ">
+        <div className="flex flex-col mt-2  border-black relative h-full justify-around">
           <div>
             <h3 className="text-xl text-gray-800 px-2 font-medium">
               {post.title}
@@ -31,7 +31,7 @@ const Post = ({ post }) => {
           </div>
 
           <button className=" bg-green-200 hover:bg-green-300 text-black font-base py-2 px-4 rounded m-4 flex items-center justify-center ">
-            This post has been reacted by {post.reactions} people
+            This post has been reacted by {post.reactions.likes} people
           </button>
         </div>
       </div>

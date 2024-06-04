@@ -1,33 +1,13 @@
-import { useContext, useRef } from "react";
-import { PostList } from "../store/PostListStore";
+import { Form, redirect } from "react-router-dom";
 
 function CreatePost() {
-  const userIdele = useRef();
-  const postTitleele = useRef();
-  const postBodyele = useRef();
-  const reactionsele = useRef();
-  const tagsele = useRef();
-  const { addPost } = useContext(PostList);
+  //const { addPost } = useContext(PostList);
 
-  const handlesubmit = (event) => {
-    event.preventDefault();
-    const userId = userIdele.current.value;
-    const postTitle = postTitleele.current.value;
-    const postBody = postBodyele.current.value;
-    const reactions = reactionsele.current.value;
-    const tags = tagsele.current.value.split(" ");
-    addPost(userId, postTitle, postBody, reactions, tags);
-    userIdele.current.value = "";
-    postTitleele.current.value = "";
-    postBodyele.current.value = "";
-    reactionsele.current.value = "";
-    tagsele.current.value = "";
-  };
   return (
     <div className="my-10 px-8 pt-6 flex justify-center items-center">
-      <form
+      <Form
         className="w-[50%] p-10 bg-slate-100 rounded-lg shadow-lg max-md:p-4 max-md:w-full flex flex-col"
-        onSubmit={handlesubmit}
+        method="POST"
       >
         <div className="mb-2">
           <label
@@ -37,7 +17,7 @@ function CreatePost() {
             User Id
           </label>
           <input
-            ref={userIdele}
+            name="userId"
             className="shadow border rounded w-full py-2 px-3 text-gray-700 focus:outline-blue-800 mb-1"
             id="userId"
             type="text"
@@ -53,7 +33,7 @@ function CreatePost() {
             Post Title
           </label>
           <input
-            ref={postTitleele}
+            name="title"
             className="shadow border rounded w-full py-2 px-3 text-gray-700 focus:outline-blue-800 mb-1"
             id="title"
             type="text"
@@ -69,7 +49,7 @@ function CreatePost() {
             Description
           </label>
           <textarea
-            ref={postBodyele}
+            name="body"
             className="shadow border rounded w-full py-2 px-3 text-gray-700 focus:outline-blue-800 mb-1 resize-none"
             rows={3}
             id="body"
@@ -86,7 +66,7 @@ function CreatePost() {
             Post Tags
           </label>
           <input
-            ref={tagsele}
+            name="tags"
             className="shadow border rounded w-full py-2 px-3 text-gray-700 focus:outline-blue-800 mb-1"
             id="tags"
             type="text"
@@ -102,7 +82,7 @@ function CreatePost() {
             Reactions
           </label>
           <input
-            ref={reactionsele}
+            name="reactions"
             className="shadow border rounded w-full py-2 px-3 text-gray-700 focus:outline-blue-800 mb-1"
             id="reactions"
             type="text"
@@ -118,9 +98,27 @@ function CreatePost() {
             Add
           </button>
         </div>
-      </form>
+      </Form>
     </div>
   );
+}
+
+export async function formsubmit(data) {
+  const formData = await data.request.formData();
+  const postData = Object.fromEntries(formData);
+  postData.tags = postData.tags.split(" ");
+  // postData.reactions = parseInt(reactions.current.value, 10);
+  fetch("https://dummyjson.com/posts/add", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(postData),
+  })
+    .then((res) => res.json())
+    .then((post) => {
+      console.log(post);
+    });
+
+  return redirect("/");
 }
 
 export default CreatePost;

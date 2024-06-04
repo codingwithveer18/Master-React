@@ -4,12 +4,12 @@ const Clocktime = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const intervalId = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
 
     // Cleanup interval on component unmount
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
