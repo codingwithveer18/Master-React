@@ -1,0 +1,23 @@
+# Ignore npm package files
+node_modules/
+
+# Ignore Vite build output
+/dist/
+
+# Ignore development server logs
+/.vite/
+
+# Ignore environment variables file (if used)
+.env
+
+# Ignore any local configuration files
+.vitepress/config.js
+
+# Ignore macOS file system metadata
+.DS_Store
+
+# Ignore any other temporary or generated files
+*.log
+*.lock
+*.sqlite
+*.swp
