@@ -14430,7 +14430,7 @@ const _h = ws({
           r = n.signal;
         return (
           t(ua.markfetchingstarted()),
-          fetch("https://myntra-clone-ui/api/items", { signal: r })
+          fetch("http://localhost:8080/api/items", { signal: r })
             .then((l) => l.json())
             .then(({ items: l }) => {
               t(ua.markfetchDone()),
